@@ -20,5 +20,56 @@
       };
       </script>
       <script data-main="assets/js/main" src="assets/js/libs/require.js"></script>
+
+      <header id="header" class="topbar">
+    <h1 class="topbar__tit topbar__logo">
+        SocialFundIt
+    </h1>
+    <nav class="topbar__nav">
+        <ul class="nav">
+            <li class="nav__item nav__item--categories">
+                <a id="btn-cat" href="#" class="btn--topbar">Filtrar</a>
+                <div id="categories-popup" class="popdown">
+                </div>
+            </li>
+        <!--
+            <li class="nav__item nav__item--geo">
+                <a href="#event" class="btn--icon">Geolocalization</a> 
+            </li>
+            <li class="nav__item nav__item--display">
+                <a href="#event" class="btn--icon">Display</a> 
+            </li>
+        -->
+        </ul>
+    </nav>
+</header>
+
+
+<div id="content" class="content-wrapper content-wrapper-topbar content-wrapper-bottombar">
+    <ul id="event_list_column_1" class="nav event-list">
+    </ul>
+    <ul id="event_list_column_2" class="nav event-list">
+    </ul>
+    <ul id="event_list_column_3" class="nav event-list event-list-last">
+    </ul>
+</div>
+
+
+<div class="bottombar">
+    <ul class="nav">
+        <li class="nav__item nav__item--funds is-selected">
+            <a href="#event" class="nav__label">funds</a>
+        </li>
+        <li class="nav__item nav__item--brands">
+            <a href="#brand" class="nav__label">entidades</a>
+        </li>
+        <li class="nav__item nav__item--community">
+            <a href="#comunity" class="nav__label">comunidad</a>
+        </li>
+        <li class="nav__item nav__item--you">
+            <a href="#profile" class="nav__label">perfil</a>
+        </li>
+    </ul>
+</div>
   </body>
 </html>
