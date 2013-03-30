@@ -2,7 +2,9 @@ define(function(require) {
     'use strict';
 
     var Backbone = require('backbone.all'),
-        MasterRouter = require('routers/master');
+        MasterRouter = require('routers/master'),
+        HeaderView = require('views/header/itemview'),
+        FooterView = require('views/footer/itemview');
 
     var application = new Backbone.Marionette.Application();
 
@@ -27,10 +29,13 @@ define(function(require) {
         };
 
         application.addRegions({
-            header: 'header',
-            footer: 'footer',
+            header: 'header#header',
+            footer: 'footer#footer',
             content: '#content'
         });
+
+        application.header.show(new HeaderView());
+        application.footer.show(new FooterView());
 
         new MasterRouter({ application: this });
         if (!Backbone.history.started) {
