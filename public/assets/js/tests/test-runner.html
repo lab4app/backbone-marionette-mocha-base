@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+        <link rel="stylesheet" href="libs/mocha/mocha.css" />
+    </head>
+    <body>
+        <div id="mocha"></div>
+        <script src="libs/mocha/mocha.js"></script>
+        <script src="libs/chai/chai.js"></script>
+        <script src="libs/sinon/sinon.js"></script>
+        <script>
+            chai.should();
+            mocha.setup('bdd');
+        </script>
+
+        <script src="../libs/require.js"></script>
+        <script src="../source/application.js"></script>
+
+        <script src="application.js"></script>
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>
