@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
 
-    var Backbone = require('backbone.all'),
+    var Backbone = require('backbone.marionette'),
         Mustache = require('mustache'),
         template = require('text!templates/footer/itemview.html'),
         $ = require('jquery');

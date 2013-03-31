@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
 
-    var Backbone = require('backbone.all'),
+    var Backbone = require('backbone.marionette'),
         MasterRouter = require('routers/master'),
         HeaderView = require('views/header/itemview'),
         FooterView = require('views/footer/itemview');
