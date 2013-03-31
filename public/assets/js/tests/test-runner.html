@@ -7,23 +7,28 @@
 		<meta charset="utf-8">
 		<title></title>
         <link rel="stylesheet" href="libs/mocha/mocha.css" />
+        <script src="libs/mocha/mocha.js"></script>
+        <script src="libs/chai/chai.js"></script>
+        <script src="../libs/require.js"></script>
+        <script src="../libs/testr.js"></script>
     </head>
     <body>
         <div id="mocha"></div>
-        <script src="libs/mocha/mocha.js"></script>
-        <script src="libs/chai/chai.js"></script>
-        <script src="libs/sinon/sinon.js"></script>
         <script>
-            chai.should();
-            mocha.setup('bdd');
-        </script>
+            // set options
+            testr.config({
+                root: './',
+                specUrl: 'spec',
+                ignore: ['jquery', 'underscore', 'mustache', 'backbone', 'text', 'backbone.marionette'],
+                whitelist: ['jquery', 'underscore', 'mustache', 'backbone', 'text', 'backbone.marionette']
+            });
 
-        <script src="../libs/require.js"></script>
-        <script src="../source/application.js"></script>
-
-        <script src="application.js"></script>
-        <script>
-            mocha.run();
+            // load app and specs
+            testr.run('../main-tests.js', function() {
+                chai.should();
+                mocha.setup('bdd');
+                mocha.run();
+            });
         </script>
     </body>
 </html>
