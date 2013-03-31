@@ -21,9 +21,6 @@
             },
             'backbone.marionette': {
                 deps: ['backbone']
-            },
-            'backbone.all': {
-                deps: ['backbone', 'backbone.marionette']
             }
         }
     });
