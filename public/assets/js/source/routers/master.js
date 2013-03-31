@@ -3,7 +3,7 @@ define(function(require) {
 
     var _ = require('underscore'),
         $ = require('jquery'),
-        Backbone = require('backbone.marionette');
+        Backbone = require('backbone');
 
     var MasterRouter = Backbone.Router.extend({
         routes: {

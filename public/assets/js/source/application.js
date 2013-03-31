@@ -1,12 +1,13 @@
 define(function(require) {
     'use strict';
 
-    var Backbone = require('backbone.marionette'),
+    var Backbone = require('backbone'),
+        Marionette = require('backbone.marionette'),
         MasterRouter = require('routers/master'),
         HeaderView = require('views/header/itemview'),
         FooterView = require('views/footer/itemview');
 
-    var application = new Backbone.Marionette.Application();
+    var application = new Marionette.Application();
 
     application.globals = {};
 

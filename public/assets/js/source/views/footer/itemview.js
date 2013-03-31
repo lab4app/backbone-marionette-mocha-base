@@ -1,12 +1,12 @@
 define(function(require) {
     'use strict';
 
-    var Backbone = require('backbone.marionette'),
+    var Marionette = require('backbone.marionette'),
         Mustache = require('mustache'),
         template = require('text!templates/footer/itemview.html'),
         $ = require('jquery');
 
-    var FooterView = Backbone.Marionette.Layout.extend({
+    var FooterView = Marionette.Layout.extend({
         template: Mustache.compile(template),
         className: 'bottombar',
         events: {
